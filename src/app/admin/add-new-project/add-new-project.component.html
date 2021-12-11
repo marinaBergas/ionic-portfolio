@@ -1,0 +1,167 @@
+<ion-row class="ion-justify-content-center ion-align-item-center">
+  <ion-col size="12">
+    <ion-title class="  ion-no-margin ion-no-padding">
+      <h3 class="text-capitalize">add new project</h3>
+    </ion-title>
+
+    <form [formGroup]="newProjectForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <ion-label for="projectTitle" class="text-capitalize"
+          >project title</ion-label
+        >
+        <input
+          type="text"
+          formControlName="projectTitle"
+          class="form-control"
+          id="projectTitle"
+          name="title"
+        />
+        <div
+          *ngIf="
+            projectControls.projectTitle.invalid &&
+            (projectControls.projectTitle.dirty ||
+              projectControls.projectTitle.touched)
+          "
+          class="error"
+        >
+          <div
+            *ngIf="projectControls.projectTitle.errors"
+            class="alert alert-danger"
+          >
+            projectTitle is required.
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <ion-label for="projectType" class="text-capitalize"
+          >project type</ion-label
+        >
+        <input
+          type="text"
+          formControlName="projectType"
+          class="form-control"
+          id="projectType"
+          name="projectType"
+        />
+        <div
+          *ngIf="
+            projectControls.projectType.invalid &&
+            (projectControls.projectType.dirty ||
+              projectControls.projectType.touched)
+          "
+          class="error"
+        >
+          <div
+            *ngIf="projectControls.projectType.errors"
+            class="alert alert-danger"
+          >
+            projectType is required.
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <ion-label for="projectUrl" class="text-capitalize"
+          >project url</ion-label
+        >
+        <input
+          type="text"
+          formControlName="projectUrl"
+          class="form-control"
+          id="projectUrl"
+          name="projectUrl"
+        />
+        <div
+          *ngIf="
+            projectControls.projectUrl.invalid &&
+            (projectControls.projectUrl.dirty ||
+              projectControls.projectUrl.touched)
+          "
+          class="error"
+        >
+          <div
+            *ngIf="projectControls.projectUrl.errors"
+            class="alert alert-danger"
+          >
+            project url is required.
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <ion-label for="logoImg" class="text-capitalize"
+          >logo img url</ion-label
+        >
+        <input
+          type="text"
+          formControlName="logoImg"
+          class="form-control"
+          id="logoImg"
+          name="logoImg"
+        />
+      </div>
+      <div class="form-group">
+        <ion-label for="projectImage" class="text-capitalize"
+          >image url</ion-label
+        >
+        <input
+          type="text"
+          name="projectImage"
+          formControlName="projectImage"
+          class="form-control"
+          id="projectImage"
+        />
+        <div
+          *ngIf="
+            projectControls.projectImage.invalid &&
+            (projectControls.projectImage.dirty ||
+              projectControls.projectImage.touched)
+          "
+          class="error"
+        >
+          <div
+            *ngIf="projectControls.projectImage.errors"
+            class="alert alert-danger"
+          >
+            project image is required.
+          </div>
+        </div>
+      </div>
+      <div class="form-group mb-5">
+        <ion-label for="projectDescription" class="text-capitalize"
+          >description</ion-label
+        >
+        <textarea
+          name="projectDescription"
+          formControlName="description"
+          class="form-control"
+          id="projectDescription"
+          cols="30"
+          rows="5"
+        ></textarea>
+        <div
+          *ngIf="
+            projectControls.description.invalid &&
+            (projectControls.description.dirty ||
+              projectControls.description.touched)
+          "
+          class="error"
+        >
+          <div
+            *ngIf="projectControls.description.errors"
+            class="alert alert-danger"
+          >
+            description is required.
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <button
+          type="submit"
+          [disabled]="!newProjectForm.valid"
+          class="btn btn-primary submit-btn"
+        >
+          public
+        </button>
+      </div>
+    </form>
+  </ion-col>
+</ion-row>

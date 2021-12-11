@@ -1,0 +1,51 @@
+<ion-row class="row projects-cards">
+  <ion-col size="10" offset="1">
+    <h2
+      class="ion-text-capitalize ion-text-center projects-cards-filter-header"
+      translate
+    >
+      {{ "PORTFOLIO.MY PORTFOLIO" }}
+    </h2>
+    <div class="projects-cards-filter-body d-flex justify-content-center">
+      <ion-list class="text-capitalize">
+        <ion-item class="text-capitalize" translate (click)="allHandle()">
+          {{ "PORTFOLIO.ALL" }}
+        </ion-item>
+        <ion-item class="text-capitalize" (click)="typeReactHandle()"
+          >react</ion-item
+        >
+        <ion-item class="text-capitalize" (click)="typeAngularHandle()"
+          >angular</ion-item
+        >
+        <ion-item class="text-capitalize" (click)="typeLandinaPageHandle()">
+          landingpage
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-col>
+  <ion-col
+    size="12"
+    size-sm="6"
+    size-lg="4"
+    *ngFor="let project of projectList"
+    class="ion-padding"
+  >
+    <ion-list class="projects-cards-item " lines="full" (click)="onClickHandle(project)">
+      <ion-item class="w-100 h-100 project-figure ">
+        <div class="img-wrapper">
+          <ion-img
+            [src]="project.imgscreenshot"
+            alt="project"
+            class="w-100 img-fluid project-img ion-margin ion-padding"
+          ></ion-img>
+        </div>
+        <div class="overLay-content">
+          <h3>{{ project.title }}</h3>
+          <p class="text-capitalize project-filteration">
+            {{ project.projectType }}
+          </p>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-col>
+</ion-row>

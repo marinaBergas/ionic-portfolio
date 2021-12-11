@@ -1,0 +1,43 @@
+.resume {
+  padding: 70px 0;
+}
+.resume h2 {
+  font-size: 3rem;
+}
+.resume-item-workPlace {
+  margin-right: 3rem;
+}
+.period-wrapper {
+  margin-left: auto;
+}
+
+.resume-item-period {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  padding: 7px 20px;
+  border-radius: 30px;
+  background: rgba(150, 187, 124, 0.1);
+  color: #96bb7c;
+}
+.resume-item-header {
+  font-size: 1.75rem;
+  margin: 30px 0px;
+}
+.resume-item-body {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #efefef;
+}
+.resume-item-body h4 {
+  font-size: 18px;
+}
+.resume-item-workHistory {
+  margin: 10px 10px 10px 0px;
+  color: #ccc;
+}
+.resume-icon {
+  margin-right: 10px;
+}
+.resume-item-wrapper{
+  margin-bottom: 10px;
+}

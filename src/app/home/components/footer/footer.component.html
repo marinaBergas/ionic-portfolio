@@ -1,0 +1,68 @@
+
+    <ion-row id="footer" class="ion-padding">
+      <ion-col size="8" size-lg="4" class=" mb-5">
+        <div class="footer-content">
+          <h3 class="text-capitalize">about</h3>
+          <p>
+            Far far away, behind the word mountains, far from the countries
+            Vokalia and Consonantia, there live the blind texts.
+          </p>
+        </div>
+        <div class="footer-content">
+          <h3 class="text-capitalize">connect</h3>
+          <ul class="social-contacts">
+            <li
+              class="social-contacts-list"
+              *ngFor="let socialIcon of socialIcons"
+            >
+              <a href="#">
+                <span>
+                  <fa-icon [icon]="socialIcon" class="instagram"> </fa-icon
+                ></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </ion-col>
+      <ion-col size="3" offset="1" size-lg="2" class="col-4 col-lg-2">
+        <div class="footer-content">
+          <h3 class="text-capitalize">navagation</h3>
+          <ul class="p-0 m-0">
+            <li
+              class="link-list text-capitalize"
+              *ngFor="let navigation of navigations"
+            >
+              <a href="#">{{ navigation.service }}</a>
+            </li>
+          </ul>
+        </div>
+      </ion-col>
+
+      <ion-col size="4"  size-lg="2" >
+        <div class="footer-content">
+          <h3 class="text-capitalize">services</h3>
+          <ul class="p-0 m-0">
+            <li
+              class="link-list text-capitalize"
+              *ngFor="let ourService of ourServiceList"
+            >
+              <a href="#">{{ ourService.service }}</a>
+            </li>
+          </ul>
+        </div>
+      </ion-col>
+      <ion-col size="4" offset="4" size-lg="3" offset-lg="0" >
+        <div class="footer-content">
+          <h3 class="text-capitalize">contact</h3>
+          <ul class="p-0 m-0">
+            <li class="link-list text-capitalize">{{ contacts.address }}</li>
+            <li class="link-list text-capitalize">
+              <a href="tel:01272747752">{{ contacts.phone }}</a>
+            </li>
+            <li class="link-list text-capitalize">
+              <a >{{ contacts.email }}</a>
+            </li>
+          </ul>
+        </div>
+      </ion-col>
+    </ion-row>

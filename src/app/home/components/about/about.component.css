@@ -1,0 +1,58 @@
+.about-section {
+  padding: 100px 0;
+}
+
+.img-wrap {
+  position: relative;
+}
+
+.img-wrap::before {
+  z-index: -1;
+  right: 0;
+  transform: translate(40%, -20%);
+  position: absolute;
+  content: "";
+  width: 304px;
+  height: 264px;
+  background: url(../../../../assets/dotsImage.png) right top;
+}
+.about-header {
+  font-size: 3rem;
+}
+.skill-header {
+  font-size: 18px;
+}
+.about-section p {
+  color: #939393;
+}
+.progress {
+  height: 0.5rem;
+}
+.progress-bar {
+  background-color: #96bb7c;
+  position: relative;
+}
+.about-btn {
+  padding: 15px 30px;
+  cursor: pointer;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  border-radius: 30px;
+  background-color: #96bb7c;
+  border-color: #96bb7c;
+  color: #fff;
+  margin: 0px 10px 0px 0px;
+}
+.about-btn a {
+  color: #fff !important;
+}
+.about-cv-btn {
+  background-color: #939393;
+}
+@media (min-width: 992px) {
+  .img-wrap {
+    padding-right: 3rem;
+  }
+}

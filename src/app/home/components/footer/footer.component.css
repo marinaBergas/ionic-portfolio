@@ -1,0 +1,49 @@
+#footer {
+  background: #efefef;
+  font-size: 14px;
+  color: #888;
+}
+.footer-content h3 {
+  font-size: 16px;
+  color: #000 !important;
+  margin-bottom: 30px;
+}
+.social-contacts {
+  padding: 0;
+  margin: 0;
+}
+.social-contacts li {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: #777;
+  border-radius: 50%;
+  position: relative;
+}
+.social-contacts li:hover {
+  background: #96bb7c;
+}
+.social-contacts li a {
+  color: #fff !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+.social-contacts-list {
+  margin-right: 0.3rem;
+}
+.link-unorder-list {
+  padding: 0;
+  margin: 0;
+}
+.link-list {
+  color: #777 !important;
+  display: block;
+  padding-bottom: 10px;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}

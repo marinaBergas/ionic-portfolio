@@ -1,0 +1,67 @@
+<ion-row class="row login-content ion-justify-content-center ion-align-items-center">
+  <ion-col class="login-col" size="12"  size-md="6" >
+    <div class="login-box ">
+      <div class="alert alert-danger" *ngIf="loginError">
+        {{ loginError }}
+      </div>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group ion-margin">
+          <input
+            type="text"
+            formControlName="username"
+            class="form-control"
+            placeholder="Username"
+            required
+          />
+          <div
+            *ngIf="
+              userControls.username.invalid &&
+              (userControls.username.dirty || userControls.username.touched)
+            "
+            class="error"
+          >
+            <div
+              *ngIf="userControls.username.errors"
+              class="alert alert-danger"
+            >
+              Username is required.
+            </div>
+          </div>
+        </div>
+        <div class="form-group ion-margin">
+          <input
+            type="password"
+            formControlName="password"
+            class="form-control"
+            placeholder="Password"
+            required
+          />
+          <div
+            *ngIf="
+              userControls.password.invalid &&
+              (userControls.password.dirty || userControls.password.touched)
+            "
+            class="error"
+          >
+            <div
+              *ngIf="userControls.password.errors"
+              class="alert alert-danger"
+            >
+              Password is required.
+            </div>
+          </div>
+        </div>
+        <div class="form-group ion-margin">
+          <button
+            type="submit"
+            [disabled]="!loginForm.valid"
+            class="btn btn-primary submit-btn"
+          >
+            Log In
+          </button>
+        </div>
+      </form>
+    </div>
+  </ion-col>
+
+</ion-row>

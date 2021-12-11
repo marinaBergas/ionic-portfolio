@@ -1,0 +1,21 @@
+.our-services h2 {
+  font-size: 3rem;
+}
+.our-services-item {
+  padding: 40px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.our-services-item .icon {
+  font-size: 50px;
+  color: #96bb7c;
+}
+
+.our-services-item h3 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.our-services p {
+  color: #939393;
+}

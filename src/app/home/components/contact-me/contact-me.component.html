@@ -1,0 +1,108 @@
+<ion-row class="contact-me-section">
+  <ion-col >
+    <ion-row >
+      <ion-col
+      size-md="12"
+        class="ion-text-capitalize ion-text-center mb-5 aos-init aos-animate"
+        data-aos="fade-up "
+        data-aos-delay="100"
+      >
+        <div class="contact-me-header ">
+          <h2 class="text-capitalize">contact me</h2>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row >
+      <ion-col size-lg="8" >
+        <form
+          class="form "
+
+        >
+          <ion-row >
+            <ion-col size="12"  size-md="6">
+              <div class="form-group">
+                <ion-label  for="firstName" >First name</ion-label>
+                <input type="text" id="firstName" class="form-control" />
+              </div>
+            </ion-col>
+            <ion-col size="12"  size-md="6" >
+              <div class="form-group">
+                <ion-label for="lastName">Last name</ion-label>
+                <input type="text" id="lastName" class="form-control" />
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row >
+            <ion-col class="col-12">
+              <div class="form-group">
+                <ion-label for="email">Email address</ion-label>
+                <input type="email" id="email" class="form-control" />
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row >
+            <ion-col size="12">
+              <div class="form-group">
+                <ion-label for="message">message</ion-label>
+                <textarea
+                  name="message"
+                  class="form-control"
+                  id="message"
+                  cols="32"
+                  rows="5"
+                ></textarea>
+              </div>
+            </ion-col>
+          </ion-row>
+          <button class="btn submit-btn" type="submit">send message</button>
+        </form>
+      </ion-col>
+      <ion-col
+      size-lg="4"
+        class="contact-info-wrapper "
+
+      >
+        <ion-row class="row contact-info">
+          <ion-col class="col-12">
+            <h3 class="mb-4 text-capitalize contact-info-header">
+              contact info
+            </h3>
+            <ion-list class="mb-3 p-0 m-0 contact-info-body">
+              <ion-item class="mb-3 d-block">
+
+              <address>
+                <span class="text-black text-capitalize">
+                  <fa-icon
+                    class="contact-info-icon"
+                    [icon]="icons.faMapMarkerIcon"
+                  ></fa-icon>
+                  {{ contacts.address }}
+                </span>
+              </address>
+              </ion-item>
+
+              <ion-item class="mb-3 d-block">
+                <a href="tel:{{ contacts.phone }}">
+                  <fa-icon
+                    class="contact-info-icon"
+                    [icon]="icons.faPhoneIcon"
+                  ></fa-icon>
+                  <span>{{ contacts.phone }}</span>
+                </a>
+              </ion-item >
+              <ion-item  class="mb-3">
+                <a >
+                  <fa-icon
+                    class="contact-info-icon"
+                    [icon]="icons.faEnvelopeIcon"
+                  ></fa-icon>
+                  <span>{{ contacts.email }}</span>
+                </a>
+              </ion-item >
+            </ion-list>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-col>
+</ion-row>

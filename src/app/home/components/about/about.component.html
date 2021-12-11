@@ -1,0 +1,56 @@
+<ion-row class="about-section">
+  <ion-col
+    size="9"
+    size-sm="8"
+    size-md="9"
+    size-lg="7"
+    class="ion-justify-content-center"
+  >
+    <div class="img-wrap">
+      <ion-img
+        src="assets/aboutImage.webp"
+        alt="about-marina"
+        class="w-100 img-fluid about-img"
+      ></ion-img>
+    </div>
+  </ion-col>
+  <ion-col size="9" size-lg="5">
+    <h2 class="about-header" translate>{{ "ABOUT.TITLE" }}</h2>
+    <p translate>
+      {{ "ABOUT.TEXT1" }}
+    </p>
+    <p translate>
+      {{ "ABOUT.TEXT2" }}
+    </p>
+    <p translate>
+      {{ "ABOUT.TEXT3" }}
+    </p>
+    <p>
+      <strong translate> {{ "ABOUT.TEXT4" }} </strong>
+      Get in touch
+    </p>
+    <ion-col class="my-5">
+      <div class="skill" *ngFor="let skill of skills">
+        <h3 class="skill-header">{{ skill.skillName }}</h3>
+        <div class="progress">
+          <div
+            class="progress-bar"
+            role="progressbar"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style="width: 85%"
+          >
+            <span>{{ skill.percentage }}</span>
+          </div>
+        </div>
+      </div>
+    </ion-col>
+    <!-- <div class="buttons-wrap">
+          <button class="btn about-btn">{{ "ABOUT.HIRE" }}</button>
+          <button class="btn about-btn about-cv-btn">
+            <a href=""> {{ "ABOUT.DOWNLOAD CV" }}</a>
+          </button>
+        </div> -->
+  </ion-col>
+</ion-row>

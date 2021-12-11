@@ -1,0 +1,34 @@
+<ion-row class="our-services">
+  <ion-col>
+    <ion-row>
+      <ion-col
+        class="our-services-header ion-text-center ion-padding"
+        size="12"
+      >
+        <h2 class="text-capitalize" translate>{{ "SERVICES.SERVICES" }}</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col
+      size="12"
+        size-md="6"
+        size-lg="4"
+       class="ion-padding"
+        *ngFor="let ourService of ourServices; index as i"
+      >
+        <div class="our-services-item text-center" data-animate-effect="fadeIn">
+          <span class="icon">
+            <fa-icon
+              [icon]="i === 0 ? faDesktop : i === 1 ? faBinoculars : faCartPlus"
+              class="cart-icon"
+            ></fa-icon>
+          </span>
+          <h3 class="mb-4">
+            {{ ourService.header }}
+          </h3>
+          <p>{{ ourService.paragraph }}</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-col>
+</ion-row>

@@ -1,0 +1,91 @@
+<ion-row class="resume">
+  <ion-col size-md="12" class="ion-text-center">
+    <h2 class="text-capitalize">resume</h2>
+  </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col size="12" size-lg="4" >
+    <ion-img src="assets/resumeImage.webp"></ion-img>
+  </ion-col>
+  <ion-col size="12" size-lg="6" offset-lg="1">
+    <ion-row>
+      <h4 class="m-0 resume-item-header">work experience</h4>
+      <ion-list
+      lines="full"
+        class="resume-item-body d-flex "
+        *ngFor="let experience of experiences"
+      >
+        <div>
+          <h4>{{ experience.prevExperience }}</h4>
+          <div class="d-flex  resume-item-wrapper">
+            <span class="resume-item-workHistory mr-3">
+              <span clas="resume-icon">
+                <fa-icon [icon]="icons.faBuildingIcon"></fa-icon>
+              </span>
+              <span>
+                {{ experience.workPlace }}
+              </span>
+            </span>
+            <span class="resume-item-workHistory">
+              <span clas="resume-icon">
+                <fa-icon [icon]="icons.faMapMarkerIcon"></fa-icon>
+              </span>
+              <span>
+                {{ experience.location }}
+              </span>
+            </span>
+          </div>
+        </div>
+        <div class="period-wrapper d-flex">
+          <div>
+            <span class="resume-item-period text-uppercase ">
+              {{ experience.period }}</span
+            >
+            <div class="d-flex resume-item-workHistory ">
+              <span class="resume-icon mr-5">
+                <fa-icon [icon]="icons.faCalendarIcon"></fa-icon>
+              </span>
+              <span class="text-capitalize">
+                {{ experience.periodCalenderStart }}</span
+              >
+              <span class="text-capitalize">
+                -{{ experience.periodCalenderEnd }}</span
+              >
+            </div>
+          </div>
+        </div>
+      </ion-list>
+    </ion-row>
+    <ion-row class="row">
+      <h4 class="mb-5 resume-item-header">Education</h4>
+      <div class="resume-item-body d-flex" *ngFor="let eduction of eductions">
+        <div>
+          <h4>{{ eduction.education }}</h4>
+          <div class="d-flex">
+            <span class="resume-item-workHistory mr-3">
+              <span clas="resume-icon ">
+                <fa-icon [icon]="icons.faBuildingIcon"></fa-icon>
+              </span>
+              <span>
+                {{ eduction.educationPlace }}
+              </span>
+            </span>
+          </div>
+        </div>
+        <div class="period-wrapper d-flex">
+          <div>
+            <div class="d-flex resume-item-workHistory mt-2">
+              <span class="resume-icon mr-3">
+                <fa-icon [icon]="icons.faCalendarIcon"></fa-icon>
+              </span>
+              <span class="text-capitalize">
+                {{ eduction.educationStart }}</span
+              >
+              <span class="text-capitalize"> -{{ eduction.educationEnd }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-row>
+  </ion-col>
+</ion-row>

@@ -1,0 +1,47 @@
+<ion-row class="our-client pt-5 pb-5 bg-light">
+  <ion-col class="container">
+    <ion-row class="row text-center our-client-text">
+      <ion-col
+        class=" our-client-text-col aos-init aos-animate"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <div class="our-client-text-header">
+          <h2 class="m-0 text-capitalize">happy clients</h2>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="row our-client-media">
+      <ion-col
+      size-md="6" offset-md="3"
+        class=" pr-5 our-client-media-wrapper aos-init aos-animate"
+        *ngFor="let client of clients; index as i"
+        data-aos="fade-up"
+        [attr.data-aos-delay]="100 + i * 100"
+      >
+        <div class="client-media-sections pt-5 pb-5">
+          <ion-item class="client-media w-100 d-flex">
+
+            <ion-avatar slot="start" class="client-media-img-container">
+
+              <ion-img
+                src="{{ client.img }}"
+                class=" w-100 image-fluid bg-light rounded-circle"
+                alt="..."
+              ></ion-img>
+            </ion-avatar>
+            <ion-label class="media-body ml-3">
+              <p>
+                {{ client.clientOpinion }}
+              </p>
+              <p class="m-0 media-body-cite">
+                -{{ client.name }} <a>, CEO XYZ Inc.</a>
+              </p>
+            </ion-label>
+          </ion-item>
+          </div>
+
+      </ion-col>
+    </ion-row>
+  </ion-col>
+</ion-row>

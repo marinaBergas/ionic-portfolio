@@ -1,20 +1,73 @@
-<ion-header [translucent]="true">
+<!-- <app-navbar></app-navbar> -->
+<!-- <app-header ></app-header>
+<app-header ></app-header> -->
+
+<!-- <app-about id="about"></app-about> -->
+<!--<app-portfolio id="pottfolio"></app-portfolio>
+<app-our-services id="services"></app-our-services>
+<app-resume id="resume"></app-resume>
+<app-clients id="clients"></app-clients>
+<app-blog id="blog"></app-blog>
+<app-contact-me id="contact"></app-contact-me>
+<app-footer></app-footer> -->
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title >recepies</ion-title>
+    <ion-item slot="end">  <ion-select #langselect (change)="translate.use(langselect.value)" name="lang">
+        <ion-select-option  *ngFor="let lang of translate.getLangs()" [value]="lang">
+          {{ lang }}
+        </ion-select-option >
+      </ion-select>
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content>
+  <ion-grid class="ion-no-margin ion-no-padding">
+    <ion-row >
+      <ion-col  >
+          <app-header ></app-header>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-padding">
+      <ion-col>
+          <app-about id="about"></app-about>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-padding">
+      <ion-col>
+        <app-portfolio id="pottfolio"></app-portfolio>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-padding">
+      <ion-col>
+        <app-our-services id="services"></app-our-services>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-padding">
+      <ion-col>
+        <app-resume id="resume"></app-resume>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-padding">
+      <ion-col>
+        <app-clients id="clients"></app-clients>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-padding">
+      <ion-col>
+        <app-blog id="blog"></app-blog>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-padding">
+      <ion-col>
+        <app-contact-me id="contact"></app-contact-me>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-no-padding ">
+      <ion-col >
+        <app-footer></app-footer>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
