@@ -23,6 +23,7 @@ import { ClientsComponent } from './components/clients/clients.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
@@ -37,7 +38,6 @@ export function httpLoaderFactory(http: HttpClient) {
     HomePageRoutingModule,
     HttpClientModule,
     FontAwesomeModule,
-
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -58,7 +58,7 @@ export function httpLoaderFactory(http: HttpClient) {
     BlogComponent,
     ContactMeComponent,
     FooterComponent,
-
+  NavbarComponent
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
 })

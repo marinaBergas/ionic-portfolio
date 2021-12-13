@@ -1,13 +1,12 @@
 
+<app-navbar></app-navbar>
+<ion-app>
 <ion-header>
   <ion-toolbar>
-    <ion-title >recepies</ion-title>
-    <ion-item slot="end">  <ion-select #langselect (change)="translate.use(langselect.value)" name="lang">
-        <ion-select-option  *ngFor="let lang of translate.getLangs()" [value]="lang">
-          {{ lang }}
-        </ion-select-option >
-      </ion-select>
-    </ion-item>
+    <ion-buttons slot="start">
+    <ion-menu-button disabled="false"></ion-menu-button>
+      </ion-buttons>
+    <ion-title>menu-content</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -15,7 +14,7 @@
   <ion-grid class="ion-no-margin ion-no-padding">
     <ion-row >
       <ion-col  >
-          <app-header ></app-header>
+          <app-header id="home"></app-header>
       </ion-col>
     </ion-row>
     <ion-row class="ion-padding">
@@ -60,4 +59,6 @@
     </ion-row>
 
   </ion-grid>
-</ion-content>
+  </ion-content>
+</ion-app>
+
