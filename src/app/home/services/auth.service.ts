@@ -7,24 +7,41 @@ import { throwError } from 'rxjs';
   providedIn: 'root',
 })
 export class AuthService {
+  redirectUrl = '';
   public _url = 'https://oposerver.herokuapp.com/user/login';
-  errorData: {} = {};
+  errorData: any = {};
   constructor(private http: HttpClient) { }
-  redirectUrl: string = '';
   login(username: string, password: string) {
     return this.http
+      // eslint-disable-next-line no-underscore-dangle
       .post<any>(`${this._url}`, {
-        username: username,
-        password: password,
+        username,
+        password,
       })
       .pipe(
         map((user) => {
-          if (user && user.user.role === "admin") {
+          if (user && user.user.role === 'admin') {
             localStorage.setItem('currentUser', JSON.stringify(user));
           }
         }),
+        // eslint-disable-next-line no-underscore-dangle
         catchError(this._handleError)
       );
+  }
+  getAuthorizationToken() {
+    const newLocal = localStorage.getItem('currentUser');
+    const currentUser = newLocal ? JSON.parse(newLocal) : [];
+    return currentUser.token;
+  }
+  isLoggedIn() {
+    if (localStorage.getItem('currentUser')) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  logout() {
+    localStorage.removeItem('currentUser');
   }
   private _handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
@@ -43,19 +60,5 @@ export class AuthService {
     };
     return throwError(this.errorData);
   }
-  getAuthorizationToken() {
-    const newLocal = localStorage.getItem('currentUser');
-    const currentUser = newLocal ? JSON.parse(newLocal) : [];
-    return currentUser.token;
-  }
-  isLoggedIn() {
-    if (localStorage.getItem('currentUser')) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-  logout() {
-    localStorage.removeItem('currentUser');
-  }
+
 }

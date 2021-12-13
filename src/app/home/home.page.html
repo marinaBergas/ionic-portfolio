@@ -1,24 +1,12 @@
-<!-- <app-navbar></app-navbar> -->
-<!-- <app-header ></app-header>
-<app-header ></app-header> -->
 
-<!-- <app-about id="about"></app-about> -->
-<!--<app-portfolio id="pottfolio"></app-portfolio>
-<app-our-services id="services"></app-our-services>
-<app-resume id="resume"></app-resume>
-<app-clients id="clients"></app-clients>
-<app-blog id="blog"></app-blog>
-<app-contact-me id="contact"></app-contact-me>
-<app-footer></app-footer> -->
+<app-side-menu></app-side-menu>
+<ion-app>
 <ion-header>
   <ion-toolbar>
-    <ion-title >recepies</ion-title>
-    <ion-item slot="end">  <ion-select #langselect (change)="translate.use(langselect.value)" name="lang">
-        <ion-select-option  *ngFor="let lang of translate.getLangs()" [value]="lang">
-          {{ lang }}
-        </ion-select-option >
-      </ion-select>
-    </ion-item>
+    <ion-buttons slot="start">
+    <ion-menu-button disabled="false"></ion-menu-button>
+      </ion-buttons>
+    <ion-title>menu-content</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -26,7 +14,7 @@
   <ion-grid class="ion-no-margin ion-no-padding">
     <ion-row >
       <ion-col  >
-          <app-header ></app-header>
+          <app-header id="home"></app-header>
       </ion-col>
     </ion-row>
     <ion-row class="ion-padding">
@@ -69,5 +57,8 @@
         <app-footer></app-footer>
       </ion-col>
     </ion-row>
+
   </ion-grid>
-</ion-content>
+  </ion-content>
+</ion-app>
+

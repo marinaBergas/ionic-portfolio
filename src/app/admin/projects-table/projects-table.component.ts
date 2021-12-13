@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProjectService } from 'src/app/home/services/project.service';
-import { Project } from 'src/app/models/interfaces';
+import { Project } from 'src/app/home/models/interfaces';
 
 @Component({
   selector: 'app-projects-table',
