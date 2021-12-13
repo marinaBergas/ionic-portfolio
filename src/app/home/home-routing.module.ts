@@ -8,8 +8,10 @@ const routes: Routes = [
   {
     path: '',
     component: HomePage,
+
     children:[  { path: 'portfolio/:id', component: ProjectDetailsComponent },
   ]
+
   }
 
 ];
