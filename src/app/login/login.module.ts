@@ -9,8 +9,8 @@ import { LoginPageRoutingModule } from './login-routing.module';
 import { LoginPage } from './login.page';
 import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { LoginComponent } from './login/login.component';
 import { RouteReuseStrategy } from '@angular/router';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   imports: [

@@ -5,7 +5,7 @@ import {
   faMapMarker,
   faCalendar,
 } from '@fortawesome/free-solid-svg-icons';
-import { Education, WorkExperiences } from 'src/app/models/interfaces';
+import { Education, WorkExperiences } from 'src/app/home/models/interfaces';
 // import { Education, WorkExperiences } from '../../models/interfaces';
 @Component({
   selector: 'app-resume',

@@ -9,7 +9,7 @@ import {
   faPinterest,
 } from '@fortawesome/free-brands-svg-icons';
 import { NavigationService } from '../../services/navigation.service';
-import { navigationServiceValues } from 'src/app/models/interfaces';
+import { navigationServiceValues } from 'src/app/home/models/interfaces';
 import { OurServiceService } from '../../services/our-service.service';
 @Component({
   selector: 'app-footer',

@@ -24,6 +24,7 @@ import { BlogComponent } from './components/blog/blog.component';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
 import { FooterComponent } from './components/footer/footer.component';
 
+
 // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
 export function httpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -56,7 +57,8 @@ export function httpLoaderFactory(http: HttpClient) {
     ClientsComponent,
     BlogComponent,
     ContactMeComponent,
-    FooterComponent
+    FooterComponent,
+
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
 })

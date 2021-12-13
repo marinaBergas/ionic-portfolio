@@ -2,8 +2,8 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { ProjectType } from '../../models/enums';
-import { Project } from '../../models/interfaces';
+import { ProjectType } from '../models/enums';
+import { Project } from '../models/interfaces';
 import { throwError } from 'rxjs';
 @Injectable({
   providedIn: 'root',
