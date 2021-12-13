@@ -23,7 +23,7 @@ import { ClientsComponent } from './components/clients/clients.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
 
 
 // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
@@ -58,8 +58,7 @@ export function httpLoaderFactory(http: HttpClient) {
     BlogComponent,
     ContactMeComponent,
     FooterComponent,
-  NavbarComponent
-  ],
+SideBarComponent  ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
 })
 export class HomePageModule {}
