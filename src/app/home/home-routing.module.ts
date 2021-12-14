@@ -7,12 +7,12 @@ import { HomePage } from './home.page';
 const routes: Routes = [
   {
     path: '',
-    component: HomePage,
+    component:HomePage,
 
-    children:[  { path: 'portfolio/:id', component: ProjectDetailsComponent },
-  ]
 
-  }
+
+  },
+  { path: 'portfolio/:id', component: ProjectDetailsComponent },
 
 ];
 

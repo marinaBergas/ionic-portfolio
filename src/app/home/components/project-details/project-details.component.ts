@@ -10,7 +10,7 @@ import { ProjectService } from '../../services/project.service';
 })
 export class ProjectDetailsComponent implements OnInit {
 public projectId: any;
-public projectDetails: Project[] = [];
+public projectDetails: Project;
 
   constructor(private projectService: ProjectService,private route: Router,private activeRoute: ActivatedRoute) { }
 
@@ -20,8 +20,8 @@ public projectDetails: Project[] = [];
   });
   this.projectService.getProjectList().subscribe((data)=>{
     // eslint-disable-next-line no-underscore-dangle
-    this.projectDetails= data.filter(p=>p._id===this.projectId);
-
+    this.projectDetails= data.filter(p=>p._id===this.projectId)[0];
+   console.log(this.projectDetails)
   });
   }
 

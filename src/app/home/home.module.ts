@@ -60,11 +60,7 @@ export function httpLoaderFactory(http: HttpClient) {
     BlogComponent,
     ContactMeComponent,
     FooterComponent,
-<<<<<<< HEAD
 SideMenuComponent],
-=======
-SideBarComponent  ],
->>>>>>> 519cc46331d41fb100c8f3c02b7c2eca9d49d0fa
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
 })
 export class HomePageModule {}

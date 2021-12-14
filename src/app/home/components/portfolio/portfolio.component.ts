@@ -26,7 +26,7 @@ export class PortfolioComponent implements OnInit {
 
   onClickHandle(project: any) {
     // eslint-disable-next-line no-underscore-dangle
-    this.route.navigate(['/portfolio',  project._id ]);
+    this.route.navigate(['home/portfolio',  project._id ]);
   }
   allHandle(): void {
     this.projectService.getProjectList().subscribe((data)=>{

@@ -5,13 +5,8 @@ import { AuthGuard } from '../home/auth/auth.guard';
 import { AdminPage } from './admin.page';
 
 const routes: Routes = [
-  { path: '', component: AdminPage ,canActivate:[AuthGuard],children:[
-    // {path:'dashboard',component:AdminDashboardComponent}      ,
-  ]},
-  // {
-  //   path: '',
-  //   component: AdminPage
-  // }
+  { path: '', component: AdminPage ,canActivate:[AuthGuard]},
+
 ];
 
 @NgModule({
