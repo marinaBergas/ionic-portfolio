@@ -63,8 +63,13 @@ export class SideMenuComponent implements OnInit {
   }
   toLogOut(){
     this.activeLink = 'logOut';
-
+    this.authService.logout();
+    this.router.navigate(['sign-in']);
   };
+  toAdmin(){
+    this.router.navigate(['admin']);
+
+  }
   get isLoggedIn() { return this.authService.isLoggedIn(); }
 
   ngOnInit() {}

@@ -22,7 +22,11 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.authService.logout();
+    if (this.authService.isLoggedIn()) {
+      this.router.navigate(['/admin']);
+    } else {
+      this.router.navigate(['/sign-in']);
+    }
   }
   get username() {
     return this.loginForm.get('username');

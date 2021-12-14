@@ -79,6 +79,16 @@
         >
           <ion-label>Log out</ion-label>
         </ion-item>
+        <ion-item
+        routerDirection="root"
+        (click)="toAdmin()"
+        [routerLink]="['admin']"
+        lines="none"
+        detail="false"
+        *ngIf="isLoggedIn"
+      >
+        <ion-label>Admin</ion-label>
+      </ion-item>
       </ion-menu-toggle>
     </ion-list>
   </ion-content>
